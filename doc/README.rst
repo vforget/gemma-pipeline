@@ -1,5 +1,15 @@
+.. |date| date::
+
+==============
 GEMMA PIPELINE
 ==============
+
+:Author: Vince Forgetta
+:Contact: <vincenzo.forgetta@mail.mcgill.ca>
+:Last modified: |date|
+
+SYNOPSIS
+--------
 
 Analyze imputed genotypes from SNPTEST using GEMMA. Uses Grid Engine to parallelize computation.
 
@@ -187,3 +197,4 @@ To filter for informative SNPs a list of SNPs with informativity >= 0.4 was gene
 
  tail -q -n +2 $INFO_FILES | awk "{ if (\$5 >= ${INFO_MIN_FREQ}){ if (\$1 ~ /\-\-\-/){ split(\$2, a, \"-\"); \
  print \$2, a[1], \$3 }else{ print \$2, \$1, \$3 }}}" | sort -k1,1 -T ${TMPDIR} | uniq -d > ${INFO_SNP_FILE}
+
