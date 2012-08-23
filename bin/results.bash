@@ -4,14 +4,16 @@ PREFIX=$1
 LOGDIR=$2
 TMPDIR=$3
 BINDIR=$(dirname $0)
+P_VALUE="5e-06"
+RESULT_FILE=results.assoc.txt.clean
 
-head -n 1 `ls output/*.assoc.txt.clean | head -n 1` > results.assoc.txt.clean
-tail -q -n +2 output/*.assoc.txt.clean | sort -T ${TMPDIR} -k 1n,1 -k 3n,3 >> results.assoc.txt.clean
+head -n 1 `ls output/*.assoc.txt.clean | head -n 1` > ${RESULT_FILE}
+tail -q -n +2 output/*.assoc.txt.clean | sort -T ${TMPDIR} -k 1n,1 -k 3n,3 >> ${RESULT_FILE}
 
 cat > ${LOGDIR}/results_${PREFIX}.r << EOT
 library(gap)
 
-res = read.table("results.assoc.txt.clean", header=T)
+res = read.table("${RESULT_FILE}", header=T)
 png(filename="qqplot_${PREFIX}.png", width=480, height=480)
 par(lty=3)
 qqunif(res\$p_score, pch=20, col="#6699CC", lcol=1, ci=T, main=paste(c(length(res\$p_score), " SNPs"),sep=" ", collapse=""))
@@ -38,3 +40,8 @@ quit()
 EOT
 
 R --no-save < ${LOGDIR}/results_${PREFIX}.r &> ${LOGDIR}/results_${PREFIX}.log
+
+# TOP SNPs
+
+head -n 1 ${RESULT_FILE} > ${RESULT_FILE}.top_snps
+awk '{ if (\$11 <= ${P_VALUE}) print $0 }' ${RESULT_FILE} >> ${RESULT_FILE}.top_snps
