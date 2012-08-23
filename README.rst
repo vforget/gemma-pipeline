@@ -1,11 +1,21 @@
 GEMMA PIPELINE
 ==============
 
-Analyze imputed genotypes from SNPTEST using GEMMA.
+Analyze imputed genotypes from SNPTEST using GEMMA. Uses Grid Engine to parallelize computation.
 
 ISSUES
 ------
-* GEMMA require phenotype to calculate relatedness matrix. Does this mean it needs to be recalculated for each phenotype?
+* GEMMA require a phenotype file to calculate relatedness matrix. Does this mean it needs to be recalculated for each phenotype?
+
+REQUIREMENTS
+------------
+
+* Linux
+* Grid Engine
+* Python with the multiprocessing module.
+* Perl
+* R statistical package with gap library.
+* Plink, gtool are optional, and used to build initial relatedness matrix.
 
 PIPELINE STEPS
 --------------
@@ -87,7 +97,7 @@ Box plots for Beta and SE are generated for each genotype file as well as for th
 4.5 Top SNPs table
 ::::::::::::::::::
 
-TDB
+TDB.
 
 SUPPLEMENTARY STEPS
 -------------------
