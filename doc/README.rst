@@ -84,20 +84,41 @@ Within the \"output\" directory there are \*.assoc.txt and \*.assoc.txt.clean fi
 
 A Manhattan plot is generated for each genotype file as well as for the entire dataset.
 
+.. image:: mhtplot_results.png
+   :width: 50 %
+
 3.3 QQ-plot
 :::::::::::
 
 A QQ plot is generated for each genotype file as well as for the entire dataset.
+
+.. image:: qqplot_results.png
+   :width: 50 %
 
 4.4 Box plots
 :::::::::::::
 
 Box plots for Beta and SE are generated for each genotype file as well as for the entire dataset.
 
+.. image:: boxplots_results.png
+   :width: 50 %
+
 4.5 Top SNPs table
 ::::::::::::::::::
 
-TDB.
+The association results file filtered for SNPs with p-value <= 5e-06::
+
+ chr     rs      ps      n_miss  beta    se      l_remle l_mle   p_wald  p_lrt   p_score
+ 1 1-74380277 74380277 0 -4.691591e-01 1.006133e-01 9.642427e-01 9.680234e-01 3.245198e-06 3.216472e-06 3.479304e-06
+ 1 1-74407171 74407171 0 -4.890655e-01 1.030370e-01 9.680546e-01 9.717733e-01 2.161249e-06 2.141216e-06 2.329294e-06
+ 1 1-118178100 118178100 0 1.164373e-01 2.445510e-02 9.480294e-01 9.520880e-01 2.010044e-06 1.997045e-06 2.178404e-06
+ 1 1-118178654 118178654 0 1.157201e-01 2.452723e-02 9.451781e-01 9.492383e-01 2.484445e-06 2.470947e-06 2.689299e-06
+ 1 1-118179969 118179969 0 1.112107e-01 2.374274e-02 9.531481e-01 9.571918e-01 2.931735e-06 2.909885e-06 3.154640e-06
+ 2 2-50816899 50816899 0 2.354443e-01 5.117126e-02 9.045662e-01 9.085561e-01 4.367353e-06 4.457731e-06 4.925201e-06
+ 2 2-67822643 67822643 0 1.196912e-01 2.592793e-02 9.863677e-01 9.902034e-01 4.061467e-06 4.034836e-06 4.365852e-06
+ 2 2-67823472 67823472 0 1.191423e-01 2.596089e-02 9.852127e-01 9.890426e-01 4.620003e-06 4.588881e-06 4.955312e-06
+ 2 2-67826230 67826230 0 1.200316e-01 2.587550e-02 9.853001e-01 9.891376e-01 3.646014e-06 3.620871e-06 3.922294e-06
+
 
 SUPPLEMENTARY STEPS
 -------------------
@@ -109,7 +130,7 @@ To convert SNPTEST to BIMBAM format::
 
  bin/gen2bimbam_batch.bash ~/archive/t123TUK/imputed/1kGenomes.Phase1/gen.sample/chr/*.gen
 
-Resulging mean genotype files are in::
+Resulting mean genotype files are in::
 
  ~/share/vince.forgetta/t123TUK/imputed/1kGenomes.Phase1/bimbam/
 
