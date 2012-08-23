@@ -18,6 +18,7 @@ Bascically, a phenotype file consists of one value per line for every individual
  phenotype value1
  phenotype value2
  phenotype value3
+ phenotype value4
  ...
  phenotype valueN
 
