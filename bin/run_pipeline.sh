@@ -1,12 +1,5 @@
 #!/bin/bash
 
-# EXAMPLE USER PARAMETERS (FOR DEBUGGING)
-# PHENO_FILE="~/share/vince.forgetta/0812-gemma-pipeline/pheno/pheno.txt"
-# MATRIX_FILE="~/share/vince.forgetta/0812-gemma-pipeline/matrix/317k/merge.bimbam.cXX.txt"
-# GEMMA_OPTIONS="-fa 4"
-# INFO_FILE="~/share/vince.forgetta/0712-probabel-pipeline/static/tuk.info_0.4"
-# TMPDIR="~/tempdata/"
-
 usage()
 {
 cat << EOF
