@@ -7,8 +7,6 @@
 #INFO_FILE="~/share/vince.forgetta/0712-probabel-pipeline/static/tuk.info_0.4"
 #TMPDIR="~/tempdata/"
 
-
-
 usage()
 {
 cat << EOF
@@ -80,7 +78,7 @@ fi
 # STATIC PARAMETERS
 BINDIR=$(dirname $0)
 LOGDIR="log"
-SGE_OPTIONS="-V -cwd -o sge_log -e sge_log"
+SGE_OPTIONS="-V -cwd -o sge_log -e sge_log -q all.q"
 
 mkdir -p ${LOGDIR}
 mkdir -p sge_log
