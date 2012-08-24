@@ -11,7 +11,11 @@ GEMMA PIPELINE
 SYNOPSIS
 --------
 
-Analyze imputed genotypes from SNPTEST using GEMMA. Uses Grid Engine to parallelize computation.
+Analyze imputed genotypes using GEMMA.
+
+Methods to convert genotypes from SNPTEST are made available for use.
+
+The pipeline uses Grid Engine to parallelize computation.
 
 ISSUES
 ------
@@ -46,16 +50,30 @@ More than one row can be present, indicating multiple phenotype values per indiv
 
 Please refer to the GEMMA manual for more detail on how to create a phenotype and covariate file.
 
+You can then specify which phenotype to use or the covariate file using the "-g" option of the pipeline (see section 3 below).
+
+Also, to convert a GenABEL formatted phenotype file to GEMMA format you can use::
+
+ bin/genabelPheno2gemmaPheno.py 
+
+See the contents of this script for further details.
+
 2. Genotypes and Relatedness Matrix
 '''''''''''''''''''''''''''''''''''
 
-In addition to a phenotype file, GEMMA also requires genotypes in BIMBAM format (see section S1) and a relatedness matrix (see section S2).
+In addition to a phenotype file, GEMMA also requires genotypes in BIMBAM format (see section S1 for converting SNPTest to BIMBAM) and a relatedness matrix (see section S2).
 
-The pipeline requires a list of informative SNPs. See section S3 for how to generate such a file.
+Optionally, pipeline also accepts a list of informative SNPs. See section S3 for how to generate such a file.
 
 3. Run GEMMA pipeline
 '''''''''''''''''''''
-Once you have all these files the pipeline is run using the run_pipeline script::
+
+Because GEMMA does not support naming a target output directory, the pipeline should be executed from the directory to store results. For example::
+
+ mkdir -p ~/share/vince.forgetta/gemma_results/project_1
+ cd ~/share/vince.forgetta/gemma_results/project_1
+
+Once you are in the proper directory and have all these required files the pipeline is run using the run_pipeline script::
 
  run_pipeline.sh -m ../matrix/317k/merge.bimbam.cXX.txt \
                  -p ../pheno/pheno.txt \
@@ -63,14 +81,19 @@ Once you have all these files the pipeline is run using the run_pipeline script:
 		 -i ~/share/vince.forgetta/0712-probabel-pipeline/static/tuk.info_0.4 \
  		 ~/share/vince.forgetta/t123TUK/imputed/1kGenomes.Phase1/bimbam/*.mgf
 
-Where options are::
+Where all options are::
 
- -m    [filename]    Relatedness matrix file
- -p    [filename]    Phenotype file
- -i    [filename]    Informative SNPs file
- -t    [directory]   Temporary directory
+ -m    [filename]    Relatedness matrix file (required)
+ -p    [filename]    Phenotype file (required)
+ -i    [filename]    Informative SNPs file (optional, default no filtering)
+ -t    [directory]   Temporary directory (optional, default ~/tempdata/)
+ -g    [string]      GEMMA options (optional, default "-fa 4")
 
-After all options the path to the mean genotype files is provided. Wildcards are allowed.
+After all options the path to the mean genotype files is provided. Wildcards are allowed e.g.,::
+
+   ~/share/vince.forgetta/t123TUK/imputed/1kGenomes.Phase1/bimbam/*.mgf 
+
+will process all mean genotype files for t123TUK imputed genotypes.
 
 The pipeline consists of 4 steps:
 
@@ -88,6 +111,8 @@ Summary results of the GEMMA analysis are:
 :::::::::::::::::::::::
 
 Within the \"output\" directory there are \*.assoc.txt and \*.assoc.txt.clean files, containg GEMMA results for all SNPs and filtered SNPs, respectively.
+
+.. important:: Informative SNPs in the "clean" files are filtered for informativity (if the option is provided to the pipeline), as well as only retaining SNPs with a beta between -1.5 and 1.5 and SE >= 0.01.
 
 4.2 Manhattan plot
 ::::::::::::::::::
@@ -183,7 +208,6 @@ S3 SNP informativity file
 '''''''''''''''''''''''''
 
 To filter for informative SNPs a list of SNPs with informativity >= 0.4 was generated as follows::
-
 
  # Files with informativity information
  INFO_FILES=`ls ~/archive/t123TUK/imputed/1kGenomes.Phase1/info/info_posterior_tuk*.b37ph\
