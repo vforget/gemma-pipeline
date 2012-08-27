@@ -5,7 +5,7 @@ LOGDIR=$2
 TMPDIR=$3
 BINDIR=$(dirname $0)
 P_VALUE="5e-06"
-RESULT_FILE=results.assoc.txt.clean
+RESULT_FILE=${PREFIX}.assoc.txt.clean
 
 head -n 1 `ls output/*.assoc.txt.clean | head -n 1` > ${RESULT_FILE}
 tail -q -n +2 output/*.assoc.txt.clean | sort -T ${TMPDIR} -k 1n,1 -k 3n,3 >> ${RESULT_FILE}
