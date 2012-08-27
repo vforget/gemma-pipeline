@@ -3,13 +3,13 @@
 usage()
 {
 cat << EOF
-usage: $0 options *.mgf
+usage: $(basename $0) options *.mgf
 
 Run GEMMA pipeline.
 
 EXAMPLE:
 
-run_pipeline.sh [options] *.mgf
+run_pipeline.sh [-h] [-m file -p file] [options] *.mgf
 
 MGF files are mean genotype files named with a .mgf extension.
 
@@ -22,6 +22,7 @@ OPTIONS:
 -i    [filename]    Informative SNPs file (optional, default no filtering)
 -t    [directory]   Temporary directory (optional, default ~/tempdata/)
 -g    [string]      GEMMA options (optional, default "-fa 4")
+-o    [string]      Prefix for output files (optional, default "genome")
 
 EOF
 }
@@ -29,14 +30,15 @@ EOF
 # REQUIRED USER PARAMETERS
 PHENO_FILE=
 MATRIX_FILE=
-INFO_FILE=
 FILES=
 # OPTIONAL USER PARAMETERS
 TMPDIR="~/tempdata/"
 GEMMA_OPTIONS="-fa 4"
+INFO_FILE=
+RESULT_PREFIX="genome"
 
 # PARSE PARAMETERS
-while getopts “h:m:p:i:t:f:g:” OPTION
+while getopts “h:m:p:i:t:f:g:o:” OPTION
 do
     case $OPTION in
 	h)
@@ -57,6 +59,9 @@ do
 	    ;;
 	g) 
 	    GEMMA_OPTIONS=$OPTARG
+	    ;;
+	o) 
+	    RESULT_PREFIX=$OPTARG
 	    ;;
 	\?)
 	    usage
@@ -79,8 +84,8 @@ echo "PHENO_FILE = $PHENO_FILE"
 echo "INFO_FILE = $INFO_FILE"
 echo "TMPDIR = $TMPDIR"
 echo "GEMMA_OPTIONS = $GEMMA_OPTIONS"
-
-# STATIC PARAMETERS
+echo "RESULT_PREFIX = $RESULT_PREFIX"
+# INTERNAL PARAMETERS
 BINDIR=$(dirname $0)
 LOGDIR="log"
 SGE_OPTIONS="-V -cwd -o sge_log -e sge_log -q all.q"
@@ -107,7 +112,7 @@ done
 
 # STEP 4: Generate results for the whole dataset. Holds until all results from STEP 2 are complete.
 if [ -z "$JOB_IDS" ]; then
-    echo "${BINDIR}/results.bash results ${LOGDIR} ${TMPDIR}" | qsub -N gemma_results ${SGE_OPTIONS}
+    echo "${BINDIR}/results.bash ${RESULT_PREFIX} ${LOGDIR} ${TMPDIR}" | qsub -N gemma_results ${SGE_OPTIONS}
 else
-    echo "${BINDIR}/results.bash results ${LOGDIR} ${TMPDIR}" | qsub -hold_jid ${JOB_IDS} -N gemma_results ${SGE_OPTIONS}
+    echo "${BINDIR}/results.bash ${RESULT_PREFIX} ${LOGDIR} ${TMPDIR}" | qsub -hold_jid ${JOB_IDS} -N gemma_results ${SGE_OPTIONS}
 fi
