@@ -209,7 +209,7 @@ Matrix is for this dataset is in::
 S3 SNP informativity file
 '''''''''''''''''''''''''
 
-To filter for informative SNPs a list of SNPs with informativity >= 0.4 was generated as follows::
+To filter for informative SNPs a list of SNPs with informativity >= 0.4 was generated as follows for the t123 1kGenomes.Phase1 data::
 
  # Files with informativity information
  INFO_FILES=`ls ~/archive/t123TUK/imputed/1kGenomes.Phase1/info/info_posterior_tuk*.b37ph\
@@ -223,4 +223,13 @@ To filter for informative SNPs a list of SNPs with informativity >= 0.4 was gene
 
  tail -q -n +2 $INFO_FILES | awk "{ if (\$5 >= ${INFO_MIN_FREQ}){ if (\$1 ~ /\-\-\-/){ split(\$2, a, \"-\"); \
  print \$2, a[1], \$3 }else{ print \$2, \$1, \$3 }}}" | sort -k1,1 -T ${TMPDIR} | uniq -d > ${INFO_SNP_FILE}
+
+For the t123 HapMap imputed data::
+
+ mkdir -p ~/share/vince.forgetta/t123TUK/imputed/HapMap/info
+ cd ~/share/vince.forgetta/t123TUK/imputed/HapMap/info
+ INFO_FILES=~/archive/t123TUK/imputed/HapMap/SNPTest/tuk123hapmapbaseimpute/INFO/*.info
+ INFO_MIN_FREQ=0.4
+ TMPDIR=~/tempdata
+ tail -q -n +2 ${INFO_FILES[@]} | awk "{ if (\$5 >= ${INFO_MIN_FREQ}){ print \$2 }}" | sort -k1,1 -T ${TMPDIR} > genome.gt0.4.info
 
