@@ -107,7 +107,7 @@ do
     JOB_IDS=${JOB_IDS},$(echo "${BINDIR}/clean.bash ${PREFIX} ${INFO_FILE}" | qsub -hold_jid gemma_${PREFIX} -N clean_${PREFIX} ${SGE_OPTIONS} | sed 's/^Your job \([0-9]\+\) .*/\1/g');
     
     # STEP 3: Generate graphs for individual files
-    echo "${BINDIR}/graphs.bash ${PREFIX} ${LOGDIR}" | qsub -hold_jid clean_${PREFIX} -N  graphs_${PREFIX} ${SGE_OPTIONS}
+    echo "${BINDIR}/graphs.bash ${PREFIX} ${LOGDIR}" | qsub -hold_jid clean_${PREFIX} -N graphs_${PREFIX} ${SGE_OPTIONS}
 done
 
 # STEP 4: Generate results for the whole dataset. Holds until all results from STEP 2 are complete.

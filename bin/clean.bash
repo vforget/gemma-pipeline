@@ -23,4 +23,3 @@ else
 	awk "{ if ( (\$5 >= ${BETA_LOWER}) && (\$5 <= ${BETA_UPPER}) && (\$6 >= ${SE_LIMIT}) ) print \$0 }" \
 	>> ${GEMMA_RES}.clean
 fi
-
