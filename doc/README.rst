@@ -77,7 +77,7 @@ Because GEMMA does not support naming a target output directory, the pipeline sh
 
 Once you are in the target directory, and have all the required files, the pipeline is run using the run_pipeline script::
 
- run_pipeline.sh -m ../matrix/317k/merge.bimbam.cXX.txt \
+ run_pipeline.bash -m ../matrix/317k/merge.bimbam.cXX.txt \
                  -p ../pheno/pheno.txt \
 		 -t ~/tempdata/ \
 		 -i ~/share/vince.forgetta/0712-probabel-pipeline/static/tuk.info_0.4 \
