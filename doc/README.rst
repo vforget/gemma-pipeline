@@ -206,6 +206,19 @@ Matrix is for this dataset is in::
 
  ~/share/vince.forgetta/gemma/matrix/317k/merge.bimbam.cXX.txt
 
+
+.. important:: As of Sept 12, 2012, two new relatedness matricies were created and should be used for analysis. They are listed below.
+
+A relatedness matrix using all 1K Genome genotypes with phenotype for all individuals set to 1::
+
+ ~/share/vince.forgetta/t123TUK/imputed/1kGenomes.Phase1/matrix/t123TUK.1kGenomes.Phase1.imputed.gk1.phenoOne.cXX.txt
+
+Same as previous, but SNPs are filtered for INFO >= 0.4 and MAF >= 0.01::
+
+ ~/share/vince.forgetta/t123TUK/imputed/1kGenomes.Phase1/matrix/t123TUK.1kGenomes.Phase1.imputed.infoGt0.4_afreqGt0.01.gk1.phenoOne.cXX.txt
+
+
+
 S3 SNP informativity file
 '''''''''''''''''''''''''
 
