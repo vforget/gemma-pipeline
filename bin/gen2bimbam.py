@@ -10,7 +10,7 @@ buffer_size = 10800000
 
 def to_float(m):
     ''' Calculates dosage values for minor allele '''
-    return [[f[1], f[3], f[4]] + ["%0.3f" % (float(f[i+1]) + float(f[i+2])*2) for i in range(5, len(f), 3)] for f in m]
+    return [[f[1], f[4], f[3]] + ["%0.3f" % (float(f[i+1]) + float(f[i+2])*2) for i in range(5, len(f), 3)] for f in m]
 
 def dosage(a):
     ''' Gets dosage values for a chunk of data. 
