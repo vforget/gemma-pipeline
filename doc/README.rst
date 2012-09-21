@@ -173,7 +173,7 @@ Resulting mean genotype files are in::
 
 Generate annotation files for GEMMA::
 
- bin/bimbam2annotate.bash ~/share/vince.forgetta/t123TUK/imputed/1kGenomes.Phase1/bimbam/*.mgf
+ bin/bimbam2annotate.bash ~/archive/t123TUK/imputed/1kGenomes.Phase1/gen.sample/chr/*.gen
 
 S2 Compute relatedness matrix
 '''''''''''''''''''''''''''''

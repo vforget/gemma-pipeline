@@ -8,20 +8,20 @@ do
     BASE=$(basename ${GENFILE} .gen)
     CHROM=
     # Try to parse chrom number from filename
-    if [[ ${BASE} =~ [0-9]+ ]]; then
+    if [[ ${BASE} =~ ^[0-9]+$ ]]; then
 	CHROM=$BASE
     else
 	CHROM=`echo ${GENFILE} | perl -p -e "s/.*chr([0-9]+).*/\1/;"`
     fi
     
     # Test that parsing was suscessful
-    if [[ ! ${CHROM} =~ [0-9]+ ]]; then
+    if [[ ! ${CHROM} =~ ^[0-9]+$ ]]; then
 	echo "Could not parse chromosome number from filename: ${GENFILE}"
-	exit(1)
+	exit
     fi
     
     # if parsing was OK, generate annotation file
-    awk "{ print \$2\",\"\$3\",\"${CHROM} }" ${GENFILE} > ${BASE}.ann
+    awk "{ print \$2\",\"\$3\",${CHROM}\" }" ${GENFILE} > ${BASE}.ann
     
     # This variant work with MGF files, and only works when snp is named #-######, e.g. 9-1200000
     # BASE=$(basename ${MGFFILE} .gen)
