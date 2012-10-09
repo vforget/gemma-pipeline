@@ -216,6 +216,7 @@ A Manhattan plot is generated for each genotype file as well as for the entire d
 
 .. image:: doc/mhtplot_results.png
    :width: 50 %
+   :alt: A Manhattan plot
 
 QQ-plot
 :::::::
@@ -224,6 +225,7 @@ A QQ plot is generated for each genotype file as well as for the entire dataset.
 
 .. image:: doc/qqplot_results.png
    :width: 50 %
+   :alt: A QQ plot.
 
 Box plots
 :::::::::
@@ -232,6 +234,7 @@ Box plots for Beta and SE are generated for each genotype file as well as for th
 
 .. image:: doc/boxplots_results.png
    :width: 50 %
+   :alt: A boxplot.
 
 Top SNPs table
 ::::::::::::::
