@@ -3,8 +3,9 @@
 PREFIX=$1
 LOGDIR=$2
 TMPDIR=$3
+P_VALUE=$4
 BINDIR=$(dirname $0)
-P_VALUE="5e-06"
+
 RESULT_FILE=${PREFIX}.assoc.txt.clean
 
 head -n 1 `ls output/*.assoc.txt.clean | head -n 1` > ${RESULT_FILE}
@@ -44,4 +45,4 @@ R --no-save < ${LOGDIR}/results_${PREFIX}.r &> ${LOGDIR}/results_${PREFIX}.log
 # TOP SNPs
 
 head -n 1 ${RESULT_FILE} > ${RESULT_FILE}.top_snps
-awk '{ if (\$11 <= ${P_VALUE}) print $0 }' ${RESULT_FILE} >> ${RESULT_FILE}.top_snps
+awk "{ if (\$11 <= ${P_VALUE}) print \$0 }" ${RESULT_FILE} >> ${RESULT_FILE}.top_snps
