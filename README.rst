@@ -21,7 +21,6 @@ REQUIREMENTS
 * Python with the multiprocessing module.
 * Perl
 * R statistical package with gap library.
-* Plink, gtool are optional, and used to build initial relatedness matrix.
 
 INPUT FILES
 -----------
@@ -62,10 +61,10 @@ SNP Genotype files
 
 The pipeline accepts as input genotype data in SNPTEST or IMPUTE format (i.e, \*.gen files). See the http://www.stats.ox.ac.uk/~marchini/software/gwas/file_format.html for further information regarding this file format.
 
-SNP Informativity File (optional)
+SNP Filter File (optional)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This file is used to filter SNPs for informativity after executing GEMMA. An excerpt from the file is::
+This file is used to filter SNPs, e.g. filter by SNP  informativity, after executing GEMMA. An excerpt from the file is::
 
  10-100000625 10 100000625
  10-100000645 10 100000645
@@ -77,6 +76,16 @@ This file is used to filter SNPs for informativity after executing GEMMA. An exc
  10-100004360 10 100004360
 
 Where columns are <snp_name> <chrom> <pos>.
+
+To filter SNPs for informativity from IMPUTE2 use the info.bash script. By default, minimum informativity cutoff is set to 0.4::
+
+ info.bash <path_to_info_files> > genome_0.4.info
+
+.. important:: For a given SNP, if multiple info values are supplied (e.g. from 317k and 610k datasets), the SNP is retained only if it passes cutoff in all datasets. This can be changed by altering the parameters used by the uniq command within the info.bash script.
+
+To alter the minimum informativity cutoff, change the INFO_MIN_FREQ variable within the info.bash script.
+
+Also, change TMPDIR to a location with sufficient disk space on your system.
 
 PROGRAMS
 --------
@@ -105,10 +114,20 @@ Miscelaneous programs
 ~~~~~~~~~~~~~~~~~~~~~
 
 * genabelPheno2gemmaPheno.py -- Script to convert GenABEL phenotype file to GEMMA phenotype file.
-* info.bash -- Script to filter SNPs for informativity.
+* info.bash -- Create SNP informativity file.
 
 PIPELINE STEPS
 --------------
+
+A flow diagram illustrating the pipeline is depicted below:
+
+.. image:: ./doc/gemma-flow.png
+  :width: 60%
+
+The nput files are required are in black background. Intermediate result files are boxed and programs are within pointed boxes.
+
+Once the input files are ready, you can proceed to execute steps in the pipeline.
+
 
 STEP1: Convert Genotypes from SNPTEST to BIMBAM
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -193,9 +212,9 @@ The above will process all mean genotype files for t123TUK imputed genotypes.
 The pipeline consists of 4 steps:
 
 i. Run GEMMA for each genotype file (gemma binary). 
-ii. Remove SNPs with low informativity, etc (clean.bash).
-iii. Generate graphs for each genotype file (graphs.bash).
-iv. Once all genotype files are processed, summarize results for the entire dataset (results.bash).
+ii. Filter SNPs for BETA, SE, informativity, etc (clean.bash).
+iii. Generate graphs for filtered results on a per chromosome basis (graphs.bash).
+iv. Once all genotype files are processed, summarize results (graphs, top snps table) for the entire dataset (results.bash).
 
 4. OUTPUT FILES
 ---------------
@@ -253,32 +272,3 @@ The association results file filtered for SNPs with p-value <= 5e-06::
  2 2-67826230 67826230 0 1.200316e-01 2.587550e-02 9.853001e-01 9.891376e-01 3.646014e-06 3.620871e-06 3.922294e-06
 
 
-SUPPLEMENTARY INFORMATION
--------------------------
-
-Create a SNP informativity File
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-To filter for informative SNPs a list of SNPs with informativity >= 0.4 was generated as follows for the t123 1kGenomes.Phase1 data::
-
- # Files with informativity information
- INFO_FILES=`ls ~/archive/t123TUK/imputed/1kGenomes.Phase1/info/info_posterior_tuk*.b37ph\
- /*.b37ph.chr1-22.ALL_1000G_phase1interim_jun2011_.posterior_sampled_haps_imputation.impute2_info`
- 
- # Min. allele freq to include SNP from informativity files
- INFO_MIN_FREQ=0.4
- 
- # Where informative SNPs are stored
- INFO_SNP_FILE=~/share/vince.forgetta/0712-probabel-pipeline/static/tuk.info_${INFO_MIN_FREQ}
-
- tail -q -n +2 $INFO_FILES | awk "{ if (\$5 >= ${INFO_MIN_FREQ}){ if (\$1 ~ /\-\-\-/){ split(\$2, a, \"-\"); \
- print \$2, a[1], \$3 }else{ print \$2, \$1, \$3 }}}" | sort -k1,1 -T ${TMPDIR} | uniq -d > ${INFO_SNP_FILE}
-
-For the t123 HapMap imputed data::
-
- mkdir -p ~/share/vince.forgetta/t123TUK/imputed/HapMap/info
- cd ~/share/vince.forgetta/t123TUK/imputed/HapMap/info
- INFO_FILES=~/archive/t123TUK/imputed/HapMap/SNPTest/tuk123hapmapbaseimpute/INFO/*.info
- INFO_MIN_FREQ=0.4
- TMPDIR=~/tempdata
- tail -q -n +2 ${INFO_FILES[@]} | awk "{ if (\$5 >= ${INFO_MIN_FREQ}){ print \$2 }}" | sort -k1,1 -T ${TMPDIR} > genome.gt0.4.info
