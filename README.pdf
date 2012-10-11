@@ -63,12 +63,12 @@ endobj
 7 0 obj
 % Page dictionary
 << /Annots [ 4 0 R ]
- /Contents 49 0 R
+ /Contents 48 0 R
  /MediaBox [ 0
  0
  595.2756
  841.8898 ]
- /Parent 48 0 R
+ /Parent 47 0 R
  /Resources << /Font 1 0 R
  /ProcSet [ /PDF
  /Text
@@ -98,12 +98,12 @@ endobj
 9 0 obj
 % Page dictionary
 << /Annots [ 8 0 R ]
- /Contents 50 0 R
+ /Contents 49 0 R
  /MediaBox [ 0
  0
  595.2756
  841.8898 ]
- /Parent 48 0 R
+ /Parent 47 0 R
  /Resources << /Font 1 0 R
  /ProcSet [ /PDF
  /Text
@@ -117,12 +117,12 @@ endobj
 % 'Page3': class PDFPage 
 10 0 obj
 % Page dictionary
-<< /Contents 51 0 R
+<< /Contents 50 0 R
  /MediaBox [ 0
  0
  595.2756
  841.8898 ]
- /Parent 48 0 R
+ /Parent 47 0 R
  /Resources << /Font 1 0 R
  /ProcSet [ /PDF
  /Text
@@ -151,12 +151,12 @@ endobj
 % 'Page4': class PDFPage 
 12 0 obj
 % Page dictionary
-<< /Contents 52 0 R
+<< /Contents 51 0 R
  /MediaBox [ 0
  0
  595.2756
  841.8898 ]
- /Parent 48 0 R
+ /Parent 47 0 R
  /Resources << /Font 1 0 R
  /ProcSet [ /PDF
  /Text
@@ -171,12 +171,12 @@ endobj
 % 'Page5': class PDFPage 
 13 0 obj
 % Page dictionary
-<< /Contents 53 0 R
+<< /Contents 52 0 R
  /MediaBox [ 0
  0
  595.2756
  841.8898 ]
- /Parent 48 0 R
+ /Parent 47 0 R
  /Resources << /Font 1 0 R
  /ProcSet [ /PDF
  /Text
@@ -190,12 +190,12 @@ endobj
 % 'Page6': class PDFPage 
 14 0 obj
 % Page dictionary
-<< /Contents 54 0 R
+<< /Contents 53 0 R
  /MediaBox [ 0
  0
  595.2756
  841.8898 ]
- /Parent 48 0 R
+ /Parent 47 0 R
  /Resources << /Font 1 0 R
  /ProcSet [ /PDF
  /Text
@@ -239,12 +239,12 @@ endobj
 % 'Page7': class PDFPage 
 17 0 obj
 % Page dictionary
-<< /Contents 55 0 R
+<< /Contents 54 0 R
  /MediaBox [ 0
  0
  595.2756
  841.8898 ]
- /Parent 48 0 R
+ /Parent 47 0 R
  /Resources << /Font 1 0 R
  /ProcSet [ /PDF
  /Text
@@ -275,12 +275,12 @@ endobj
 % 'Page8': class PDFPage 
 19 0 obj
 % Page dictionary
-<< /Contents 56 0 R
+<< /Contents 55 0 R
  /MediaBox [ 0
  0
  595.2756
  841.8898 ]
- /Parent 48 0 R
+ /Parent 47 0 R
  /Resources << /Font 1 0 R
  /ProcSet [ /PDF
  /Text
@@ -296,15 +296,15 @@ endobj
 20 0 obj
 % Document Root
 << /Outlines 22 0 R
- /PageLabels 57 0 R
+ /PageLabels 56 0 R
  /PageMode /UseNone
- /Pages 48 0 R
+ /Pages 47 0 R
  /Type /Catalog >>
 endobj
 % 'R21': class PDFInfo 
 21 0 obj
 << /Author (Vince Forgetta)
- /CreationDate (D:20121011160507+05'00')
+ /CreationDate (D:20121011161604+05'00')
  /Keywords ()
  /Producer (ReportLab http://www.reportlab.com)
  /Subject (\(unspecified\))
@@ -312,7 +312,7 @@ endobj
 endobj
 % 'R22': class PDFOutlines 
 22 0 obj
-<< /Count 31
+<< /Count 30
  /First 23 0 R
  /Last 41 0 R
  /Type /Outlines >>
@@ -355,7 +355,7 @@ endobj
  /Prev 24 0 R
  /Title (INPUT FILES) >>
 endobj
-% 'Outline.26.0': class OutlineEntryObject 
+% 'Outline.25.0': class OutlineEntryObject 
 26 0 obj
 << /Dest [ 7 0 R
  /XYZ
@@ -366,7 +366,7 @@ endobj
  /Parent 25 0 R
  /Title (Phenotype File) >>
 endobj
-% 'Outline.26.1': class OutlineEntryObject 
+% 'Outline.25.1': class OutlineEntryObject 
 27 0 obj
 << /Dest [ 9 0 R
  /XYZ
@@ -378,7 +378,7 @@ endobj
  /Prev 26 0 R
  /Title (SNP Genotype files) >>
 endobj
-% 'Outline.26.2': class OutlineEntryObject 
+% 'Outline.25.2': class OutlineEntryObject 
 28 0 obj
 << /Dest [ 9 0 R
  /XYZ
@@ -387,7 +387,7 @@ endobj
  0 ]
  /Parent 25 0 R
  /Prev 27 0 R
- /Title (SNP Informativity File \(optional\)) >>
+ /Title (SNP Filter File \(optional\)) >>
 endobj
 % 'Outline.3': class OutlineEntryObject 
 29 0 obj
@@ -395,7 +395,7 @@ endobj
  /Dest [ 9 0 R
  /XYZ
  62.69291
- 218.4236
+ 206.4236
  0 ]
  /First 30 0 R
  /Last 32 0 R
@@ -404,35 +404,35 @@ endobj
  /Prev 25 0 R
  /Title (PROGRAMS) >>
 endobj
-% 'Outline.27.0': class OutlineEntryObject 
+% 'Outline.26.0': class OutlineEntryObject 
 30 0 obj
 << /Dest [ 9 0 R
  /XYZ
  62.69291
- 167.4236
+ 155.4236
  0 ]
  /Next 31 0 R
  /Parent 29 0 R
  /Title (Data preparation) >>
 endobj
-% 'Outline.27.1': class OutlineEntryObject 
+% 'Outline.26.1': class OutlineEntryObject 
 31 0 obj
 << /Dest [ 10 0 R
  /XYZ
  62.69291
- 723.0236
+ 693.0236
  0 ]
  /Next 32 0 R
  /Parent 29 0 R
  /Prev 30 0 R
  /Title (Data Analysis) >>
 endobj
-% 'Outline.27.2': class OutlineEntryObject 
+% 'Outline.26.2': class OutlineEntryObject 
 32 0 obj
 << /Dest [ 10 0 R
  /XYZ
  62.69291
- 567.0236
+ 537.0236
  0 ]
  /Parent 29 0 R
  /Prev 31 0 R
@@ -444,7 +444,7 @@ endobj
  /Dest [ 10 0 R
  /XYZ
  62.69291
- 483.0236
+ 453.0236
  0 ]
  /First 34 0 R
  /Last 40 0 R
@@ -453,7 +453,7 @@ endobj
  /Prev 29 0 R
  /Title (PIPELINE STEPS) >>
 endobj
-% 'Outline.28.0': class OutlineEntryObject 
+% 'Outline.27.0': class OutlineEntryObject 
 34 0 obj
 << /Dest [ 12 0 R
  /XYZ
@@ -464,7 +464,7 @@ endobj
  /Parent 33 0 R
  /Title (STEP1: Convert Genotypes from SNPTEST to BIMBAM) >>
 endobj
-% 'Outline.28.1': class OutlineEntryObject 
+% 'Outline.27.1': class OutlineEntryObject 
 35 0 obj
 << /Dest [ 13 0 R
  /XYZ
@@ -476,7 +476,7 @@ endobj
  /Prev 34 0 R
  /Title (STEP2: Generate BIMBAM SNP Annoation File) >>
 endobj
-% 'Outline.28.2': class OutlineEntryObject 
+% 'Outline.27.2': class OutlineEntryObject 
 36 0 obj
 << /Count 3
  /Dest [ 13 0 R
@@ -491,7 +491,7 @@ endobj
  /Prev 35 0 R
  /Title (STEP3: Compute Relatedness Matrix) >>
 endobj
-% 'Outline.29.0': class OutlineEntryObject 
+% 'Outline.28.0': class OutlineEntryObject 
 37 0 obj
 << /Dest [ 13 0 R
  /XYZ
@@ -502,7 +502,7 @@ endobj
  /Parent 36 0 R
  /Title (Merge all genotype data into one file) >>
 endobj
-% 'Outline.29.1': class OutlineEntryObject 
+% 'Outline.28.1': class OutlineEntryObject 
 38 0 obj
 << /Dest [ 13 0 R
  /XYZ
@@ -514,7 +514,7 @@ endobj
  /Prev 37 0 R
  /Title (Create a fake phenotype file) >>
 endobj
-% 'Outline.29.2': class OutlineEntryObject 
+% 'Outline.28.2': class OutlineEntryObject 
 39 0 obj
 << /Dest [ 13 0 R
  /XYZ
@@ -525,7 +525,7 @@ endobj
  /Prev 38 0 R
  /Title (Create relatedness matrix) >>
 endobj
-% 'Outline.28.3': class OutlineEntryObject 
+% 'Outline.27.3': class OutlineEntryObject 
 40 0 obj
 << /Dest [ 13 0 R
  /XYZ
@@ -538,45 +538,44 @@ endobj
 endobj
 % 'Outline.5': class OutlineEntryObject 
 41 0 obj
-<< /Count 6
+<< /Count 5
  /Dest [ 14 0 R
  /XYZ
  62.69291
- 552.6236
+ 540.6236
  0 ]
  /First 42 0 R
- /Last 47 0 R
+ /Last 43 0 R
  /Parent 22 0 R
  /Prev 33 0 R
  /Title (4. OUTPUT FILES) >>
 endobj
-% 'Outline.30.0': class OutlineEntryObject 
+% 'Outline.29.0': class OutlineEntryObject 
 42 0 obj
 << /Dest [ 14 0 R
  /XYZ
  62.69291
- 501.6236
+ 489.6236
  0 ]
  /Next 43 0 R
  /Parent 41 0 R
  /Title (Association results) >>
 endobj
-% 'Outline.30.1': class OutlineEntryObject 
+% 'Outline.29.1': class OutlineEntryObject 
 43 0 obj
 << /Count 3
  /Dest [ 14 0 R
  /XYZ
  62.69291
- 328.6236
+ 316.6236
  0 ]
  /First 44 0 R
  /Last 46 0 R
- /Next 47 0 R
  /Parent 41 0 R
  /Prev 42 0 R
  /Title (Manhattan plot) >>
 endobj
-% 'Outline.31.0': class OutlineEntryObject 
+% 'Outline.30.0': class OutlineEntryObject 
 44 0 obj
 << /Dest [ 17 0 R
  /XYZ
@@ -587,7 +586,7 @@ endobj
  /Parent 43 0 R
  /Title (QQ-plot) >>
 endobj
-% 'Outline.31.1': class OutlineEntryObject 
+% 'Outline.30.1': class OutlineEntryObject 
 45 0 obj
 << /Dest [ 17 0 R
  /XYZ
@@ -599,7 +598,7 @@ endobj
  /Prev 44 0 R
  /Title (Box plots) >>
 endobj
-% 'Outline.31.2': class OutlineEntryObject 
+% 'Outline.30.2': class OutlineEntryObject 
 46 0 obj
 << /Dest [ 19 0 R
  /XYZ
@@ -610,19 +609,8 @@ endobj
  /Prev 45 0 R
  /Title (Top SNPs table) >>
 endobj
-% 'Outline.30.2': class OutlineEntryObject 
+% 'R47': class PDFPages 
 47 0 obj
-<< /Dest [ 19 0 R
- /XYZ
- 62.69291
- 376.8253
- 0 ]
- /Parent 41 0 R
- /Prev 43 0 R
- /Title (Create a SNP informativity File) >>
-endobj
-% 'R48': class PDFPages 
-48 0 obj
 % page tree
 << /Count 8
  /Kids [ 7 0 R
@@ -635,8 +623,8 @@ endobj
  19 0 R ]
  /Type /Pages >>
 endobj
-% 'R49': class PDFStream 
-49 0 obj
+% 'R48': class PDFStream 
+48 0 obj
 % page stream
 << /Length 6185 >>
 stream
@@ -978,10 +966,10 @@ Q
 endstream
 
 endobj
-% 'R50': class PDFStream 
-50 0 obj
+% 'R49': class PDFStream 
+49 0 obj
 % page stream
-<< /Length 5307 >>
+<< /Length 4888 >>
 stream
 1 0 0 1 0 0 cm BT /F1 12 Tf 14.4 TL ET
 q
@@ -1027,18 +1015,18 @@ Q
 q
 1 0 0 1 62.69291 617.8236 cm
 q
-BT 1 0 0 1 0 7.23 Tm 18 TL /F2 15 Tf 0 0 0 rg (SNP Informativity File \(optional\)) Tj T* ET
+BT 1 0 0 1 0 7.23 Tm 18 TL /F2 15 Tf 0 0 0 rg (SNP Filter File \(optional\)) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 599.8236 cm
+1 0 0 1 62.69291 587.8236 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL (This file is used to filter SNPs for informativity after executing GEMMA. An excerpt from the file is:) Tj T* ET
+BT 1 0 0 1 0 16.82 Tm /F1 10 Tf 12 TL .899398 Tw (This file is used to filter SNPs, e.g. filter by SNP informativity, after executing GEMMA. An excerpt from) Tj T* 0 Tw (the file is:) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 482.6236 cm
+1 0 0 1 62.69291 470.6236 cm
 q
 q
 1 0 0 1 0 0 cm
@@ -1059,20 +1047,20 @@ Q
 Q
 Q
 q
-1 0 0 1 62.69291 462.6236 cm
+1 0 0 1 62.69291 450.6236 cm
 q
 BT 1 0 0 1 0 4.82 Tm 12 TL /F1 10 Tf 0 0 0 rg (Where columns are <) Tj (snp_name) Tj (> <) Tj (chrom) Tj (> <) Tj (pos) Tj (>) Tj (.) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 432.6236 cm
+1 0 0 1 62.69291 420.6236 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 16.82 Tm /F1 10 Tf 12 TL 1.055984 Tw (To generate this file from IMPUTE2 info files use the info.bash script. By default, minimum informativity) Tj T* 0 Tw (cutoff is set to 0.4:) Tj T* ET
+BT 1 0 0 1 0 16.82 Tm /F1 10 Tf 12 TL .776412 Tw (To filter SNPs for informativity from IMPUTE2 use the info.bash script. By default, minimum informativity) Tj T* 0 Tw (cutoff is set to 0.4:) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 399.4236 cm
+1 0 0 1 62.69291 387.4236 cm
 q
 q
 1 0 0 1 0 0 cm
@@ -1092,10 +1080,10 @@ Q
 Q
 Q
 q
-1 0 0 1 62.69291 379.4236 cm
+1 0 0 1 62.69291 367.4236 cm
 Q
 q
-1 0 0 1 62.69291 284.4236 cm
+1 0 0 1 62.69291 272.4236 cm
 .960784 .960784 .862745 rg
 n 0 95 469.8898 -95 re f*
 0 0 0 rg
@@ -1127,49 +1115,49 @@ n 469.8898 0 m 469.8898 95 l S
 Q
 Q
 q
-1 0 0 1 62.69291 278.4236 cm
+1 0 0 1 62.69291 266.4236 cm
 Q
 q
-1 0 0 1 62.69291 248.4236 cm
+1 0 0 1 62.69291 236.4236 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 16.82 Tm /F1 10 Tf 12 TL 2.29248 Tw (To alter the minimum informativity cutoff, change the INFO_MIN_FREQ variable within the info.bash) Tj T* 0 Tw (script.) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 230.4236 cm
+1 0 0 1 62.69291 218.4236 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL (Also, change TMPDIR to a location with sufficient disk space on your system.) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 197.4236 cm
+1 0 0 1 62.69291 185.4236 cm
 q
 BT 1 0 0 1 0 8.435 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (PROGRAMS) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 179.4236 cm
+1 0 0 1 62.69291 167.4236 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL (The programs within the bin directory and their purpose are:) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 149.4236 cm
+1 0 0 1 62.69291 137.4236 cm
 q
 BT 1 0 0 1 0 7.23 Tm 18 TL /F2 15 Tf 0 0 0 rg (Data preparation) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 137.4236 cm
+1 0 0 1 62.69291 125.4236 cm
 Q
 q
-1 0 0 1 62.69291 137.4236 cm
+1 0 0 1 62.69291 125.4236 cm
 Q
 q
-1 0 0 1 62.69291 113.4236 cm
+1 0 0 1 62.69291 101.4236 cm
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
 q
@@ -1190,10 +1178,20 @@ q
 Q
 Q
 q
-1 0 0 1 62.69291 107.4236 cm
+1 0 0 1 62.69291 95.42362 cm
 Q
+ 
+endstream
+
+endobj
+% 'R50': class PDFStream 
+50 0 obj
+% page stream
+<< /Length 5121 >>
+stream
+1 0 0 1 0 0 cm BT /F1 12 Tf 14.4 TL ET
 q
-1 0 0 1 62.69291 83.42362 cm
+1 0 0 1 62.69291 741.0236 cm
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
 q
@@ -1214,20 +1212,10 @@ q
 Q
 Q
 q
-1 0 0 1 62.69291 77.42362 cm
+1 0 0 1 62.69291 735.0236 cm
 Q
- 
-endstream
-
-endobj
-% 'R51': class PDFStream 
-51 0 obj
-% page stream
-<< /Length 4668 >>
-stream
-1 0 0 1 0 0 cm BT /F1 12 Tf 14.4 TL ET
 q
-1 0 0 1 62.69291 753.0236 cm
+1 0 0 1 62.69291 723.0236 cm
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
 q
@@ -1248,10 +1236,10 @@ q
 Q
 Q
 q
-1 0 0 1 62.69291 747.0236 cm
+1 0 0 1 62.69291 717.0236 cm
 Q
 q
-1 0 0 1 62.69291 735.0236 cm
+1 0 0 1 62.69291 705.0236 cm
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
 q
@@ -1272,22 +1260,22 @@ q
 Q
 Q
 q
-1 0 0 1 62.69291 735.0236 cm
+1 0 0 1 62.69291 705.0236 cm
 Q
 q
-1 0 0 1 62.69291 705.0236 cm
+1 0 0 1 62.69291 675.0236 cm
 q
 BT 1 0 0 1 0 7.23 Tm 18 TL /F2 15 Tf 0 0 0 rg (Data Analysis) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 693.0236 cm
+1 0 0 1 62.69291 663.0236 cm
 Q
 q
-1 0 0 1 62.69291 693.0236 cm
+1 0 0 1 62.69291 663.0236 cm
 Q
 q
-1 0 0 1 62.69291 681.0236 cm
+1 0 0 1 62.69291 651.0236 cm
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
 q
@@ -1308,10 +1296,10 @@ q
 Q
 Q
 q
-1 0 0 1 62.69291 675.0236 cm
+1 0 0 1 62.69291 645.0236 cm
 Q
 q
-1 0 0 1 62.69291 663.0236 cm
+1 0 0 1 62.69291 633.0236 cm
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
 q
@@ -1332,10 +1320,10 @@ q
 Q
 Q
 q
-1 0 0 1 62.69291 657.0236 cm
+1 0 0 1 62.69291 627.0236 cm
 Q
 q
-1 0 0 1 62.69291 645.0236 cm
+1 0 0 1 62.69291 615.0236 cm
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
 q
@@ -1356,10 +1344,10 @@ q
 Q
 Q
 q
-1 0 0 1 62.69291 639.0236 cm
+1 0 0 1 62.69291 609.0236 cm
 Q
 q
-1 0 0 1 62.69291 615.0236 cm
+1 0 0 1 62.69291 585.0236 cm
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
 q
@@ -1380,10 +1368,10 @@ q
 Q
 Q
 q
-1 0 0 1 62.69291 609.0236 cm
+1 0 0 1 62.69291 579.0236 cm
 Q
 q
-1 0 0 1 62.69291 597.0236 cm
+1 0 0 1 62.69291 567.0236 cm
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
 q
@@ -1404,10 +1392,10 @@ q
 Q
 Q
 q
-1 0 0 1 62.69291 591.0236 cm
+1 0 0 1 62.69291 561.0236 cm
 Q
 q
-1 0 0 1 62.69291 579.0236 cm
+1 0 0 1 62.69291 549.0236 cm
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
 q
@@ -1428,22 +1416,22 @@ q
 Q
 Q
 q
-1 0 0 1 62.69291 579.0236 cm
+1 0 0 1 62.69291 549.0236 cm
 Q
 q
-1 0 0 1 62.69291 549.0236 cm
+1 0 0 1 62.69291 519.0236 cm
 q
 BT 1 0 0 1 0 7.23 Tm 18 TL /F2 15 Tf 0 0 0 rg (Miscelaneous programs) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 537.0236 cm
+1 0 0 1 62.69291 507.0236 cm
 Q
 q
-1 0 0 1 62.69291 537.0236 cm
+1 0 0 1 62.69291 507.0236 cm
 Q
 q
-1 0 0 1 62.69291 513.0236 cm
+1 0 0 1 62.69291 483.0236 cm
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
 q
@@ -1464,10 +1452,10 @@ q
 Q
 Q
 q
-1 0 0 1 62.69291 507.0236 cm
+1 0 0 1 62.69291 477.0236 cm
 Q
 q
-1 0 0 1 62.69291 495.0236 cm
+1 0 0 1 62.69291 465.0236 cm
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
 q
@@ -1488,16 +1476,16 @@ q
 Q
 Q
 q
-1 0 0 1 62.69291 495.0236 cm
+1 0 0 1 62.69291 465.0236 cm
 Q
 q
-1 0 0 1 62.69291 462.0236 cm
+1 0 0 1 62.69291 432.0236 cm
 q
 BT 1 0 0 1 0 8.435 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (PIPELINE STEPS) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 444.0236 cm
+1 0 0 1 62.69291 414.0236 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL (A flow diagram illustrating the pipeline is depicted below:) Tj T* ET
@@ -1507,8 +1495,8 @@ Q
 endstream
 
 endobj
-% 'R52': class PDFStream 
-52 0 obj
+% 'R51': class PDFStream 
+51 0 obj
 % page stream
 << /Length 1575 >>
 stream
@@ -1579,8 +1567,8 @@ Q
 endstream
 
 endobj
-% 'R53': class PDFStream 
-53 0 obj
+% 'R52': class PDFStream 
+52 0 obj
 % page stream
 << /Length 5295 >>
 stream
@@ -1826,10 +1814,10 @@ Q
 endstream
 
 endobj
-% 'R54': class PDFStream 
-54 0 obj
+% 'R53': class PDFStream 
+53 0 obj
 % page stream
-<< /Length 4668 >>
+<< /Length 4749 >>
 stream
 1 0 0 1 0 0 cm BT /F1 12 Tf 14.4 TL ET
 q
@@ -1940,7 +1928,7 @@ q
 1 0 0 1 23 -3 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL (Remove SNPs with low informativity, etc \(clean.bash\).) Tj T* ET
+BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL (Filter SNPs for BETA, SE, informativity, etc \(clean.bash\).) Tj T* ET
 Q
 Q
 q
@@ -1964,7 +1952,7 @@ q
 1 0 0 1 23 -3 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL (Generate graphs for each genotype file \(graphs.bash\).) Tj T* ET
+BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL (Generate graphs for filtered results on a per chromosome basis \(graphs.bash\).) Tj T* ET
 Q
 Q
 q
@@ -1974,11 +1962,11 @@ q
 1 0 0 1 62.69291 576.6236 cm
 Q
 q
-1 0 0 1 62.69291 564.6236 cm
+1 0 0 1 62.69291 552.6236 cm
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
 q
-1 0 0 1 6 -3 cm
+1 0 0 1 6 9 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL 4 0 Td (iv.) Tj T* -4 0 Td ET
@@ -1988,46 +1976,46 @@ q
 1 0 0 1 23 -3 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL (Once all genotype files are processed, summarize results for the entire dataset \(results.bash\).) Tj T* ET
+BT 1 0 0 1 0 16.82 Tm /F1 10 Tf 12 TL 1.868555 Tw (Once all genotype files are processed, summarize results \(graphs, top snps table\) for the entire) Tj T* 0 Tw (dataset \(results.bash\).) Tj T* ET
 Q
 Q
 q
 Q
 Q
 q
-1 0 0 1 62.69291 564.6236 cm
+1 0 0 1 62.69291 552.6236 cm
 Q
 q
-1 0 0 1 62.69291 531.6236 cm
+1 0 0 1 62.69291 519.6236 cm
 q
 BT 1 0 0 1 0 8.435 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (4. OUTPUT FILES) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 513.6236 cm
+1 0 0 1 62.69291 501.6236 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL (Summary results of the GEMMA analysis are:) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 483.6236 cm
+1 0 0 1 62.69291 471.6236 cm
 q
 BT 1 0 0 1 0 7.23 Tm 18 TL /F2 15 Tf 0 0 0 rg (Association results) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 453.6236 cm
+1 0 0 1 62.69291 441.6236 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 16.82 Tm /F1 10 Tf 12 TL 1.595814 Tw (Within the GEMMA output/ directory there are *.assoc.txt and *.assoc.txt.clean files, containg GEMMA) Tj T* 0 Tw (results for all SNPs and filtered SNPs, respectively.) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 441.6236 cm
+1 0 0 1 62.69291 429.6236 cm
 Q
 q
-1 0 0 1 62.69291 346.6236 cm
+1 0 0 1 62.69291 334.6236 cm
 .960784 .960784 .862745 rg
 n 0 95 469.8898 -95 re f*
 0 0 0 rg
@@ -2058,16 +2046,16 @@ n 469.8898 0 m 469.8898 95 l S
 Q
 Q
 q
-1 0 0 1 62.69291 340.6236 cm
+1 0 0 1 62.69291 328.6236 cm
 Q
 q
-1 0 0 1 62.69291 310.6236 cm
+1 0 0 1 62.69291 298.6236 cm
 q
 BT 1 0 0 1 0 7.23 Tm 18 TL /F2 15 Tf 0 0 0 rg (Manhattan plot) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 292.6236 cm
+1 0 0 1 62.69291 280.6236 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL (A Manhattan plot is generated for each genotype file as well as for the entire dataset.) Tj T* ET
@@ -2077,8 +2065,8 @@ Q
 endstream
 
 endobj
-% 'R55': class PDFStream 
-55 0 obj
+% 'R54': class PDFStream 
+54 0 obj
 % page stream
 << /Length 884 >>
 stream
@@ -2127,10 +2115,10 @@ Q
 endstream
 
 endobj
-% 'R56': class PDFStream 
-56 0 obj
+% 'R55': class PDFStream 
+55 0 obj
 % page stream
-<< /Length 4186 >>
+<< /Length 1923 >>
 stream
 1 0 0 1 0 0 cm BT /F1 12 Tf 14.4 TL ET
 q
@@ -2173,139 +2161,80 @@ Q
 Q
 Q
 Q
-q
-1 0 0 1 62.69291 358.8253 cm
-q
-BT 1 0 0 1 0 7.23 Tm 18 TL /F2 15 Tf 0 0 0 rg (Create a SNP informativity File) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 328.8253 cm
-q
-BT 1 0 0 1 0 16.82 Tm .159988 Tw 12 TL /F1 10 Tf 0 0 0 rg (To filter for informative SNPs a list of SNPs with informativity >) Tj (= 0.4 was generated as follows for the t123) Tj T* 0 Tw (1kGenomes.Phase1 data:) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 210.1139 cm
-q
-q
-.704271 0 0 .704271 0 0 cm
-q
-1 0 0 1 6.6 9.37139 cm
-q
-.662745 .662745 .662745 RG
-.5 w
-.960784 .960784 .862745 rg
-n -6 -6 666 156 re B*
-Q
-q
-BT 1 0 0 1 0 137.71 Tm 12 TL /F3 10 Tf 0 0 0 rg (# Files with informativity information) Tj T* (INFO_FILES=`ls ~/archive/t123TUK/imputed/1kGenomes.Phase1/info/info_posterior_tuk*.b37ph\\) Tj T* (/*.b37ph.chr1-22.ALL_1000G_phase1interim_jun2011_.posterior_sampled_haps_imputation.impute2_info`) Tj T*  T* (# Min. allele freq to include SNP from informativity files) Tj T* (INFO_MIN_FREQ=0.4) Tj T*  T* (# Where informative SNPs are stored) Tj T* (INFO_SNP_FILE=~/share/vince.forgetta/0712-probabel-pipeline/static/tuk.info_${INFO_MIN_FREQ}) Tj T*  T* (tail -q -n +2 $INFO_FILES | awk "{ if \(\\$5 ) Tj (>) Tj (= ${INFO_MIN_FREQ}\){ if \(\\$1 ~ /\\-\\-\\-/\){ split\(\\$2, a, \\"-\\"\); \\) Tj T* (print \\$2, a[1], \\$3 }else{ print \\$2, \\$1, \\$3 }}}" | sort -k1,1 -T ${TMPDIR} | uniq -d ) Tj (>) Tj ( ${INFO_SNP_FILE}) Tj T* ET
-Q
-Q
-Q
-Q
-Q
-q
-1 0 0 1 62.69291 190.1139 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL (For the t123 HapMap imputed data:) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 131.2569 cm
-q
-q
-.596913 0 0 .596913 0 0 cm
-q
-1 0 0 1 6.6 11.05689 cm
-q
-.662745 .662745 .662745 RG
-.5 w
-.960784 .960784 .862745 rg
-n -6 -6 786 84 re B*
-Q
-q
-BT 1 0 0 1 0 65.71 Tm 12 TL /F3 10 Tf 0 0 0 rg (mkdir -p ~/share/vince.forgetta/t123TUK/imputed/HapMap/info) Tj T* (cd ~/share/vince.forgetta/t123TUK/imputed/HapMap/info) Tj T* (INFO_FILES=~/archive/t123TUK/imputed/HapMap/SNPTest/tuk123hapmapbaseimpute/INFO/*.info) Tj T* (INFO_MIN_FREQ=0.4) Tj T* (TMPDIR=~/tempdata) Tj T* (tail -q -n +2 ${INFO_FILES[@]} | awk "{ if \(\\$5 ) Tj (>) Tj (= ${INFO_MIN_FREQ}\){ print \\$2 }}" | sort -k1,1 -T ${TMPDIR} ) Tj (>) Tj ( genome.gt0.4.info) Tj T* ET
-Q
-Q
-Q
-Q
-Q
  
 endstream
 
 endobj
-% 'R57': class PDFPageLabels 
-57 0 obj
+% 'R56': class PDFPageLabels 
+56 0 obj
 % Document Root
 << /Nums [ 0
- 58 0 R
+ 57 0 R
  1
- 59 0 R
+ 58 0 R
  2
- 60 0 R
+ 59 0 R
  3
- 61 0 R
+ 60 0 R
  4
- 62 0 R
+ 61 0 R
  5
- 63 0 R
+ 62 0 R
  6
- 64 0 R
+ 63 0 R
  7
- 65 0 R ] >>
+ 64 0 R ] >>
+endobj
+% 'R57': class PDFPageLabel 
+57 0 obj
+% None
+<< /S /D
+ /St 1 >>
 endobj
 % 'R58': class PDFPageLabel 
 58 0 obj
 % None
 << /S /D
- /St 1 >>
+ /St 2 >>
 endobj
 % 'R59': class PDFPageLabel 
 59 0 obj
 % None
 << /S /D
- /St 2 >>
+ /St 3 >>
 endobj
 % 'R60': class PDFPageLabel 
 60 0 obj
 % None
 << /S /D
- /St 3 >>
+ /St 4 >>
 endobj
 % 'R61': class PDFPageLabel 
 61 0 obj
 % None
 << /S /D
- /St 4 >>
+ /St 5 >>
 endobj
 % 'R62': class PDFPageLabel 
 62 0 obj
 % None
 << /S /D
- /St 5 >>
+ /St 6 >>
 endobj
 % 'R63': class PDFPageLabel 
 63 0 obj
 % None
 << /S /D
- /St 6 >>
+ /St 7 >>
 endobj
 % 'R64': class PDFPageLabel 
 64 0 obj
 % None
 << /S /D
- /St 7 >>
-endobj
-% 'R65': class PDFPageLabel 
-65 0 obj
-% None
-<< /S /D
  /St 8 >>
 endobj
 xref
-0 66
+0 65
 0000000000 65535 f
 0000000113 00000 n
 0000000245 00000 n
@@ -2335,51 +2264,50 @@ xref
 0000801908 00000 n
 0000802085 00000 n
 0000802281 00000 n
-0000802476 00000 n
-0000802704 00000 n
-0000802883 00000 n
-0000803075 00000 n
-0000803257 00000 n
-0000803492 00000 n
-0000803703 00000 n
-0000803923 00000 n
-0000804177 00000 n
-0000804378 00000 n
-0000804585 00000 n
-0000804774 00000 n
-0000804961 00000 n
-0000805182 00000 n
-0000805365 00000 n
-0000805600 00000 n
-0000805771 00000 n
-0000805959 00000 n
-0000806137 00000 n
-0000806313 00000 n
-0000806482 00000 n
-0000812768 00000 n
-0000818176 00000 n
-0000822945 00000 n
-0000824621 00000 n
-0000830017 00000 n
-0000834786 00000 n
-0000835770 00000 n
-0000840061 00000 n
-0000840245 00000 n
-0000840322 00000 n
-0000840399 00000 n
-0000840476 00000 n
-0000840553 00000 n
-0000840630 00000 n
-0000840707 00000 n
-0000840784 00000 n
+0000802469 00000 n
+0000802697 00000 n
+0000802876 00000 n
+0000803068 00000 n
+0000803250 00000 n
+0000803485 00000 n
+0000803696 00000 n
+0000803916 00000 n
+0000804170 00000 n
+0000804371 00000 n
+0000804578 00000 n
+0000804767 00000 n
+0000804954 00000 n
+0000805175 00000 n
+0000805358 00000 n
+0000805578 00000 n
+0000805749 00000 n
+0000805937 00000 n
+0000806096 00000 n
+0000806265 00000 n
+0000812551 00000 n
+0000817540 00000 n
+0000822762 00000 n
+0000824438 00000 n
+0000829834 00000 n
+0000834684 00000 n
+0000835668 00000 n
+0000837696 00000 n
+0000837880 00000 n
+0000837957 00000 n
+0000838034 00000 n
+0000838111 00000 n
+0000838188 00000 n
+0000838265 00000 n
+0000838342 00000 n
+0000838419 00000 n
 trailer
 << /ID 
  % ReportLab generated PDF document -- digest (http://www.reportlab.com) 
- [(\3559mc\2471\334\034\023zv\234\031\255\243\264) (\3559mc\2471\334\034\023zv\234\031\255\243\264)] 
+ [(T\350\361\214*\244\032\230\036[\024\306\357p\312.) (T\350\361\214*\244\032\230\036[\024\306\357p\312.)] 
 
  /Info 21 0 R
  /Root 20 0 R
- /Size 66 >>
+ /Size 65 >>
 startxref
-840831
+838466
 %%EOF
