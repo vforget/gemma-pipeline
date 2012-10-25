@@ -8,6 +8,26 @@ import gc
 # Managable buffer size. For ~6,000 individuals consumes ~300MB of physical memory.
 buffer_size = 10800000
 
+iupac = {'A': 'A',
+         'C': 'C',
+         'G': 'G',
+         'T': 'T',
+         'U': 'U',
+         'AT': 'W',
+         'CG': 'S',
+         'AC': 'M',
+         'GT': 'K',
+         'AG': 'R',
+         'CT': 'Y',
+         'CGT': 'B',
+         'AGT': 'D',
+         'ACT': 'H',
+         'ACG': 'V',
+         'ACGT': 'N' }
+
+def to_iupac(allele_str):
+    return iupac["".join(sorted(allele_str.split(',')))]
+
 def gen_to_mgf(f):
     ''' Calculates dosage of minor allele for a all individuals for one SNP'''
     # Dosage list for 2nd allele
@@ -20,9 +40,9 @@ def gen_to_mgf(f):
     if a2d > totd:
         sys.stderr.write("Warning: SNP %s -- Dosage for allele 2 exceeds MAF threshold \
 of 0.5: %s > %s. Returning dosage for allele 1 instead.\n" % (f[1], a2d, totd))
-        return [f[3], f[4]] + ["%0.3f" % (float(f[i+1]) + float(f[i])*2) \
+        return [f[3], to_iupac(f[4])] + ["%0.3f" % (float(f[i+1]) + float(f[i])*2) \
                                    for i in range(5, len(f), 3)]
-    return [f[4], f[3]] + ["%0.3f" % x for x in a2]
+    return [to_iupac(f[4]), f[3]] + ["%0.3f" % x for x in a2]
 
 def write_mgf(a):
     ''' Gets dosage values for a chunk of data. 
@@ -30,7 +50,7 @@ def write_mgf(a):
     d = a[0]
     fn = a[1]
     m = [x.strip().split(" ") for x in d]
-    t = [[f[1]] + gen_to_mgf(f) for f in m]
+    t = [[f[1].replace(',','|')] + gen_to_mgf(f) for f in m]
     sys.stderr.write("Writing output to %s\n" % (fn))
     o = open(fn, "w")
     print >> o, "\n".join(",".join(r) for r in t)
@@ -38,28 +58,32 @@ def write_mgf(a):
 
 if __name__ == "__main__":
     # Path to SNPTEST .gen file
-    fullpath = sys.argv[1]
+    root = sys.argv[1]
+    # fullpath = sys.argv[1]
+    
     # Number of processors to use
     POOL_SIZE = int(sys.argv[2])
     # Path to temporary directory to store chunks of dosage data
     tmpdir = sys.argv[3]
     
-    dirpath, filename = os.path.split(fullpath)
-    root, ext = os.path.splitext(filename)
+    #dirpath, filename = os.path.split(fullpath)
+    #root, ext = os.path.splitext(filename)
     
     d = []
-    gfh = open(fullpath)
+    #gfh = open(fullpath)
     c = 0
     chunk = []
     while 1:
         # Get chunk of imputed data
-        d = gfh.readlines(buffer_size)
+        # d = gfh.readlines(buffer_size)
+        d = sys.stdin.readlines(buffer_size)
         if not d:
             break
         fn = tmpdir + "/" + root + "." + str(c) + ".d"
         # Append chunk to pool of work
         chunk.append([d, fn])
         # If gathered enough work ...
+        write_mgf([d, fn])
         if len(chunk) == POOL_SIZE:
             p = Pool(POOL_SIZE)
             # Calculate dosage for chunks in parallel
@@ -74,4 +98,4 @@ if __name__ == "__main__":
     p = Pool(POOL_SIZE)
     p.map(write_mgf, chunk)
     p.close()
-    gfh.close()
+    # gfh.close()
