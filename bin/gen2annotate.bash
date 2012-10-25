@@ -6,7 +6,8 @@ FILES=($@)
 REGEXP="[0-9]+"
 for GENFILE in ${FILES[@]}
 do
-    BASE=$(basename ${GENFILE} .gen)
+    
+    BASE=$(basename ${GENFILE} .gen.gz)
     CHROM=
     # Try to parse chrom number from filename
     if [[ ${BASE} =~ ^[0-9]+$ ]]; then
@@ -22,6 +23,6 @@ do
     fi
     
     # if parsing was OK, generate annotation file
-    awk "{ print \$2\",\"\$3\",${CHROM}\" }" ${GENFILE} > ${BASE}.ann
+    zcat ${GENFILE} |  awk "{ print \$2\",\"\$3\",${CHROM}\" }" > ${BASE}.ann
     
 done
