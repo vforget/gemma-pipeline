@@ -21,7 +21,7 @@ Primary options:
 -t    [directory]   Temporary directory (optional, default ~/tempdata/)
 
 GEMMA options:
--g    [string]      GEMMA options (optional, default "-fa 4")
+-g    [string]      GEMMA options (optional, default "-lmm 4")
 -a    [float]       GEMMA minor allele frequency cutoff (default 0.01)
 -n    [float]       GEMMA missigness percent cutoff (default 0.05)
 
@@ -97,7 +97,7 @@ do
 	    ;;
 	g) 
 	    GEMMA_OPTIONS=$OPTARG
-	    echo $GEMMA_OPTIONS | awk '{ if ($1 ~ /\-(fa|o)/) exit 1 }'
+	    echo $GEMMA_OPTIONS | awk '{ if ($1 ~ /\-(lmm|o)/) exit 1 }'
 	    if [ $? -eq 1 ]; then
 		echo "${progname} -- Not allowed to change the GEMMA -fa or -o parameter."
 		exit 1
@@ -209,7 +209,7 @@ do
     DIRNAME=$(dirname ${MGFFILE})
     echo "${progname} -- Processing ${MGFFILE}"
     # STEP 1: Run GEMMA
-    cmd="${BINDIR}/gemma -fa 4 -g ${MGFFILE} -a ${DIRNAME}/${PREFIX}.ann -p ${PHENO_FILE} -k ${MATRIX_FILE} -o ${PREFIX} -miss ${MISS_CUTOFF} -maf ${MAF_CUTOFF} ${GEMMA_OPTIONS}"
+    cmd="${BINDIR}/gemma.x -lmm 4 -g ${MGFFILE} -a ${DIRNAME}/${PREFIX}.ann -p ${PHENO_FILE} -k ${MATRIX_FILE} -o ${PREFIX} -miss ${MISS_CUTOFF} -maf ${MAF_CUTOFF} ${GEMMA_OPTIONS}"
     echo "${progname} Step 1 Running GEMMA: $cmd"
     echo $cmd | qsub -N gemma_${PREFIX} ${SGE_OPTIONS}
     
