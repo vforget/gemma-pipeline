@@ -209,7 +209,7 @@ do
     DIRNAME=$(dirname ${MGFFILE})
     echo "${progname} -- Processing ${MGFFILE}"
     # STEP 1: Run GEMMA
-    cmd="${BINDIR}/gemma.x -lmm 4 -g ${MGFFILE} -a ${DIRNAME}/${PREFIX}.ann -p ${PHENO_FILE} -k ${MATRIX_FILE} -o ${PREFIX} -miss ${MISS_CUTOFF} -maf ${MAF_CUTOFF} ${GEMMA_OPTIONS}"
+    cmd="${BINDIR}/gemma -lmm 4 -g ${MGFFILE} -a ${DIRNAME}/${PREFIX}.ann -p ${PHENO_FILE} -k ${MATRIX_FILE} -o ${PREFIX} -miss ${MISS_CUTOFF} -maf ${MAF_CUTOFF} ${GEMMA_OPTIONS}"
     echo "${progname} Step 1 Running GEMMA: $cmd"
     echo $cmd | qsub -N gemma_${PREFIX} ${SGE_OPTIONS}
     
