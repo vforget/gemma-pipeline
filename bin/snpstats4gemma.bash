@@ -34,6 +34,7 @@ do
     rm -f $gemma_in.snp-stats.$i
     # Join GEMMA results to QCTOOL snp-stats
     join -t "	" -1 2 -2 2 <(sort -T ~/tempdata -k2,2 $gemma_in.$i) <(tail -n +2 $bgen_dir/$i.snp-stats | sort -T ~/tempdata -k2,2) | sort -T ~/tempdata -k3,3n >> $gemma_in.snp-stats.$i
+    rm -f $gemma_in.$i
 done
 
 # Header
