@@ -40,4 +40,4 @@ done
 (head -n 1 $gemma_in | cut -f 1,3-; head -n 1 $bgen_dir/$i.snp-stats  | cut -f 1,3-;) | perl -p -e "s/\n/\t/g;" | awk '{ print "rs\t"$0 }' > $gemma_in.snp-stats
 # Merge all chroms
 cat $gemma_in.snp-stats.{1..22} >> $gemma_in.snp-stats
-rm $gemma_in.snp-stats.*
+rm -f $gemma_in.snp-stats.*
