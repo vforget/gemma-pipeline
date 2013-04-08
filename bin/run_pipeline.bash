@@ -205,13 +205,20 @@ do
 	echo "${progname} -- Genotype file ${MGFFILE} is non-existent."
 	exit 1
     fi
-    PREFIX=$(basename ${MGFFILE} .mgf)
+    PREFIX=$(basename ${MGFFILE} .mgf.gz)
     DIRNAME=$(dirname ${MGFFILE})
     echo "${progname} -- Processing ${MGFFILE}"
     # STEP 1: Run GEMMA
-    cmd="${BINDIR}/gemma -lmm 4 -g ${MGFFILE} -a ${DIRNAME}/${PREFIX}.ann -p ${PHENO_FILE} -k ${MATRIX_FILE} -o ${PREFIX} -miss ${MISS_CUTOFF} -maf ${MAF_CUTOFF} ${GEMMA_OPTIONS}"
-    echo "${progname} Step 1 Running GEMMA: $cmd"
-    echo $cmd | qsub -N gemma_${PREFIX} ${SGE_OPTIONS}
+    cat > ${LOGDIR}/gemma_${PREFIX}.sh << EOT 
+#!/bin/bash
+rm ${PREFIX}.fifo
+mkfifo ${PREFIX}.fifo
+{ gunzip --stdout -d ${MGFFILE} > ${PREFIX}.fifo; sleep 1; gunzip --stdout -d ${MGFFILE} > ${PREFIX}.fifo; } &
+${BINDIR}/gemma -lmm 4 -g ${PREFIX}.fifo -a ${DIRNAME}/${PREFIX}.ann -p ${PHENO_FILE} -k ${MATRIX_FILE} -o ${PREFIX} -miss ${MISS_CUTOFF} -maf ${MAF_CUTOFF} ${GEMMA_OPTIONS}
+EOT
+    echo "${progname} Step 1 Running GEMMA"
+    cat ${LOGDIR}/gemma_${PREFIX}.sh
+    qsub -N gemma_${PREFIX} ${SGE_OPTIONS} log/gemma_${PREFIX}.sh
     
     # STEP 2: Clean SNPs for low informativity, etc.
     cmd="${BINDIR}/clean.bash ${PREFIX} ${BETA_UPPER} ${BETA_LOWER} ${SE_CUTOFF} ${FILTER} ${INFO_FILE}"
