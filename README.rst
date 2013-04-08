@@ -108,14 +108,14 @@ The pipeline should be executed from within a directory to store results. For ex
  mkdir -p ~/gemma_results/
  cd ~/gemma_results/
 
-Once you are in the output directory, and have all the required files (\*.mgf (BIMBAM Genotype), \*.ann (BIMBAM Annotation), phenotype, and relatedness matrix), the pipeline is run using the run_pipeline script::
+Once you are in the output directory, and have all the required files (\*.mgf.gz (BIMBAM Genotype), \*.ann (BIMBAM Annotation), phenotype, and relatedness matrix), the pipeline is run using the run_pipeline script::
 
  run_pipeline.bash -m ../matrix/317k/merge.bimbam.cXX.txt \
                  -p ../pheno/pheno.txt \
 		 -t ~/tempdata/ \
 		 -f 
 		 -i ~/static/tuk.info_0.4 \
- 		 ~/share/t123TUK/imputed/1kGenomes.Phase1/bimbam/*.mgf
+ 		 ~/share/t123TUK/imputed/1kGenomes.Phase1/bimbam/*.mgf.gz
 
 Parameters in effect are::
 
@@ -127,7 +127,7 @@ Parameters in effect are::
 
 After all flagged parameners, the path to the BIMBAM mean genotype files is provided. Wildcards are allowed e.g.,::
 
-   ~/share/t123TUK/imputed/1kGenomes.Phase1/bimbam/*.mgf 
+   ~/share/t123TUK/imputed/1kGenomes.Phase1/bimbam/*.mgf.gz
 
 A complete list of available parameters is::
 
@@ -325,7 +325,9 @@ GEMMA is compatible with BIMBAM mean genotype file format. Genotype data is in S
 
  bin/gen2bimbam_batch.bash ~/archive/t123TUK/imputed/1kGenomes.Phase1/gen.sample/chr/\*.gen.gz
 
-The output mean genotype files are given a ".mgf" file extension.
+Compress the genotype files using gzip.
+
+The output mean genotype files are given a ".mgf.gz" file extension.
 
 STEP2: Generate BIMBAM SNP Annoation File
 :::::::::::::::::::::::::::::::::::::::::
