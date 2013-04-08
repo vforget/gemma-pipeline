@@ -213,7 +213,7 @@ do
 #!/bin/bash
 rm ${PREFIX}.fifo
 mkfifo ${PREFIX}.fifo
-{ gunzip --stdout -d ${MGFFILE} > ${PREFIX}.fifo; sleep 1; gunzip --stdout -d ${MGFFILE} > ${PREFIX}.fifo; } &
+( gunzip --stdout -d ${MGFFILE} > ${PREFIX}.fifo; sleep 1; gunzip --stdout -d ${MGFFILE} > ${PREFIX}.fifo ) &
 ${BINDIR}/gemma -lmm 4 -g ${PREFIX}.fifo -a ${DIRNAME}/${PREFIX}.ann -p ${PHENO_FILE} -k ${MATRIX_FILE} -o ${PREFIX} -miss ${MISS_CUTOFF} -maf ${MAF_CUTOFF} ${GEMMA_OPTIONS}
 EOT
     echo "${progname} Step 1 Running GEMMA"
